@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import { AdminDashboard } from "./components/AdminDashboard/AdminDashboard";
+import "bulma/css/bulma.min.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
+      <h1>Portfolio - Johan Vargas</h1>
+
+      <AdminDashboard projectValue={""} />
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+        <h2 className="job-title">Sr. Frontend Developer</h2>
+        <p className="job-description">
+          Features and bugfix in pags build with AEM, fully integrated with
+          Adobe Experience Manager and using some features likes SASS, LESS,
+          Vanilla JS, React and all the frontend part together AEM support
         </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
