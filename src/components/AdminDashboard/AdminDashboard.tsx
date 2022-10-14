@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type AdminDashboardProps = {
   projectValue: string;
@@ -12,6 +12,10 @@ const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
 
   const [value, setValue] = useState("");
   const [screenValue, setScreenValue] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("screenValue", JSON.stringify(screenValue));
+  }, [screenValue]);
   return (
     <React.Fragment>
       <form action="" className="main">
