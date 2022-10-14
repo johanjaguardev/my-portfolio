@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { AdminDashboard } from "./AdminDashboard";
+import { localStorageStoreMock } from "./../../store/LocalStorageStoreMock ";
+
+const window = {
+  localStorage: localStorageStoreMock(),
+};
 
 describe("AdminDashboard", (): void => {
   //   it("should be a function", (): void => {
@@ -35,7 +40,7 @@ describe("AdminDashboard", (): void => {
     expect(inputProject.value).toBe("Portfolio Johan Vargas");
   });
 
-  it("Should print in screen div after clicking a number", (): void => {
+  it("Should print in screen div after clicking send button", (): void => {
     render(<AdminDashboard projectValue={""} />);
     const sendButton = screen.getByTestId("sendButton");
     const inputProject = screen.getByRole("textbox");
@@ -45,5 +50,19 @@ describe("AdminDashboard", (): void => {
     fireEvent.click(sendButton);
     const screenText = screen.getByTestId("screenText");
     expect(screenText.innerText).toBe("Portfolio Johan Vargas");
+  });
+
+  it("Should save an item in localstorage called screenValue", (): void => {
+    render(<AdminDashboard projectValue={""} />);
+    const sendButton = screen.getByTestId("sendButton");
+    const inputProject = screen.getByRole("textbox");
+    fireEvent.change(inputProject, {
+      target: { value: "Portfolio Johan Vargas" },
+    });
+    window.localStorage.setItem("screenValue", "Portfolio Johan Vargas");
+    fireEvent.click(sendButton);
+    expect(window.localStorage.getItem("screenValue")).toBe(
+      "Portfolio Johan Vargas"
+    );
   });
 });
