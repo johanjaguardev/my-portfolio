@@ -9,10 +9,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Johan Vargas</h1>
+      <h1>Portfolio - Johan Vargas</h1>
 
       <AdminDashboard />
-      <div className="card">
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -25,7 +25,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </div>
   );
 }
