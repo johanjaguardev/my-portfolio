@@ -6,6 +6,7 @@ My portfolio Exercise with React + Vite + Typescript
 
 Sources:
 https://robertmarshall.dev/blog/how-to-mock-local-storage-in-jest-tests/
+https://blog.logrocket.com/using-localstorage-react-hooks/
 
 ## 20 - 30 Install and configure project with vitest and make first TDD component (Oct/13/2022)
 
