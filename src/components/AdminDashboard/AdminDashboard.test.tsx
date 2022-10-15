@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { AdminDashboard } from "./AdminDashboard";
-import { localStorageStoreMock } from "./../../store/LocalStorageStoreMock ";
+import { localStorageMock } from "../../utils/localStorageMock ";
 
 const window = {
-  localStorage: localStorageStoreMock(),
+  localStorage: localStorageMock(),
 };
 
 describe("AdminDashboard", (): void => {

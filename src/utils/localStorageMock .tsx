@@ -1,6 +1,6 @@
 type Store = any;
 
-class LocalStorageStoreMock {
+class LocalStorageMock {
   store: Store;
   length: number;
 
@@ -72,8 +72,8 @@ class LocalStorageStoreMock {
   }
 }
 
-const localStorageStoreMock = (): any => {
-  return new LocalStorageStoreMock();
+const localStorageMock = (): any => {
+  return new LocalStorageMock();
 };
 
-export { localStorageStoreMock };
+export { localStorageMock };
