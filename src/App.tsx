@@ -1,7 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import { AdminDashboard } from "./components/AdminDashboard/AdminDashboard";
+import { Admin } from "./components/Admin/Admin";
 import "bulma/css/bulma.min.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <h1>Portfolio - Johan Vargas</h1>
 
-      <AdminDashboard projectValue={""} />
+      <Admin projectValue={""} />
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
