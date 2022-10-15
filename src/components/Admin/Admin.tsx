@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-type AdminDashboardProps = {
-  projectValue: string;
+type AdminProps = {
+  projectValue?: string;
 };
 
-const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
+const Admin = ({ projectValue }: AdminProps) => {
   const handleSendClick = (e: React.MouseEvent<HTMLElement>): void => {
     e.preventDefault();
     setScreenValue(value);
@@ -44,4 +44,4 @@ const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
     </React.Fragment>
   );
 };
-export { AdminDashboard };
+export { Admin };

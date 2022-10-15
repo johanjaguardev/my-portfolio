@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
-import { AdminDashboard } from "./AdminDashboard";
+import { Admin } from "./Admin";
 import { localStorageMock } from "../../utils/localStorageMock ";
 
 const window = {
@@ -18,21 +18,21 @@ describe("AdminDashboard", (): void => {
   afterEach(cleanup);
 
   it("Should Render", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
   });
 
   it("Should render label for project name", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
     screen.getByText("Project Name");
   });
 
   it("Should render button send", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
     screen.getByText("Send");
   });
 
   it("Should update the input value", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
     const inputProject = screen.getByRole("textbox") as HTMLInputElement;
     fireEvent.change(inputProject, {
       target: { value: "Portfolio Johan Vargas" },
@@ -41,7 +41,7 @@ describe("AdminDashboard", (): void => {
   });
 
   it("Should print in screen div after clicking send button", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
     const sendButton = screen.getByTestId("sendButton");
     const inputProject = screen.getByRole("textbox");
     fireEvent.change(inputProject, {
@@ -53,7 +53,7 @@ describe("AdminDashboard", (): void => {
   });
 
   it("Should save an item in localstorage called screenValue", (): void => {
-    render(<AdminDashboard projectValue={""} />);
+    render(<Admin />);
     const sendButton = screen.getByTestId("sendButton");
     const inputProject = screen.getByRole("textbox");
     fireEvent.change(inputProject, {
