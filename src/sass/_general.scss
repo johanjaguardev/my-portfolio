@@ -1,0 +1,19 @@
+@import "./_variables.scss";
+body {
+  background-color: $bg-1;
+  color: $color-1;
+}
+
+* {
+  color: $color-1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: $accent-color-1;
+}

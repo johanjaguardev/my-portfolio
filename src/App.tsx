@@ -2,6 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Admin } from "./components/Admin/Admin";
+import { Page } from "./components/Page/Page";
+
 import "bulma/css/bulma.min.css";
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
       <h1>Portfolio - Johan Vargas</h1>
 
       <Admin projectValue={""} />
+      <Page></Page>
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
