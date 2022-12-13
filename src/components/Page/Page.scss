@@ -1,0 +1,14 @@
+@import "./../../sass/variables";
+@import "./../../sass/general";
+
+.experiences {
+  background-color: rgba($bg-2, 0.18);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  h2 {
+    grid-column-start: span 3;
+    text-align: left;
+  }
+}

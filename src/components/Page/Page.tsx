@@ -1,3 +1,5 @@
+import "./Page.scss";
+
 const DATA = {
   title: "Johan Vargas",
   job: "Frontend Developer",
@@ -71,18 +73,21 @@ const DATA = {
 
 const Page = (): any => {
   return (
-    <div>
+    <div className="Page">
       <h1>{DATA.title}</h1>
       <h2>{DATA.job}</h2>
-      {DATA.experiences.map((e) => (
-        <div key={e.company}>
-          <h3>{e.company}</h3>
-          <p>{e.location}</p>
-          <p>{e.isRemote ? "Remote" : "Not Remote"}</p>
-          <p>{e.startDate}</p>
-          <p>{e.endDate}</p>
-        </div>
-      ))}
+      <div className="experiences">
+        <h2>Experience</h2>
+        {DATA.experiences.map((e) => (
+          <div key={e.company} className="experience">
+            <h3>{e.company}</h3>
+            <p>{e.location}</p>
+            <p>{e.isRemote ? "Remote" : "Not Remote"}</p>
+            <p>{e.startDate}</p>
+            <p>{e.endDate}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
