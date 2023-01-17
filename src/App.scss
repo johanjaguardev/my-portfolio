@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400&display=swap");
+
+@import "./sass/variables";
+@import "./sass/layout";
+body {
+  background-color: $bg-body;
+  display: flex;
+  font-family: $font-general;
+  font-size: $html-font-size;
+  justify-content: center;
+  width: 100%;
+}
+div,
+p,
+span,
+em,
+i,
+b {
+  color: $h-color;
+  font-family: $font-general;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: $p-color;
+  font-family: $font-heading;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: rem(72px);
+}
+
+h2 {
+  font-size: rem(48px);
+}
+#root {
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.logo {
+  grid-column: span 10;
+  height: rem(300px);
+  margin: rem(50px) auto 0 auto;
+}
+
+.projects {
+  display: grid;
+  gap: 20px;
+  grid-column: span 10;
+  grid-template-columns: repeat(10, [col-start] 1fr);
+  border: 10px solid $border-color;
+  border-radius: $border-radius;
+  margin: 0 0 rem(20px);
+  padding: 20px;
+}

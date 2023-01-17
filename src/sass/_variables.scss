@@ -1,0 +1,41 @@
+@use "sass:math";
+
+@function stripUnit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+@function rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+// Bulma Breakpoints
+$screenXL: 1408px;
+$screenL: 1216px;
+$screenM: 1024px;
+
+// tablet and landscape mobile
+$screenS: 769px;
+
+//mobile
+$screenXS: 414px;
+
+$html-font-size: 16px;
+$border-radius: rem(20px);
+$spacer: rem($html-font-size);
+
+//typography definition
+$font-heading: "Roboto Condensed", sans-serif;
+$font-general: "Roboto", sans-serif;
+//colors basis
+/* SCSS HEX */
+$light-gray: #d6d6d6ff;
+$aureolin: #ffee32ff;
+$cyber-yellow: #ffd100ff;
+$eerie-black: #202020ff;
+$jet: #333533ff;
+
+//semantic colors
+$bg-body: $cyber-yellow;
+$border-color: $eerie-black;
+$h-color: $eerie-black;
+$p-color: $eerie-black;
+$a-color: $jet;

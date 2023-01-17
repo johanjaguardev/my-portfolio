@@ -1,10 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import logo from "./assets/logo-2x.png";
 import { Admin } from "./components/Admin/Admin";
 import "bulma/css/bulma.min.css";
 import { Project } from "./components/Project/Project";
 import { ProjectProps, IProject } from "./types/ProjectProps";
+import "./App.scss";
 
 const mockProjects: IProject[] = [
   {
@@ -99,13 +99,20 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Portfolio - Johan Vargas</h1>
+      <div className="container">
+        {!logo && <h1>Portfolio - Johan Vargas</h1>}
+        <img src={logo} className="logo" />
 
-      {isAdminAvailable && <Admin projectValue={""} />}
+        {isAdminAvailable && <Admin projectValue={""} />}
 
-      {projects.map((project) => (
-        <Project project={project} />
-      ))}
+        {projects.length > 0 && (
+          <div className="projects">
+            {projects.map((project) => (
+              <Project project={project} />
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

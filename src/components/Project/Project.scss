@@ -1,0 +1,23 @@
+@import "./../../sass/variables";
+.project {
+  grid-column: span 3;
+
+  h2 {
+    a {
+      color: $h-color;
+    }
+  }
+
+  &__stack {
+    display: grid;
+    grid-template-columns: repeat(5, [col-start] 1fr);
+    gap: 5px;
+  }
+
+  &__skill {
+    background-color: $a-color;
+    border-radius: rem(7px);
+    padding: rem(2px) rem(5px);
+    color: $bg-body;
+  }
+}

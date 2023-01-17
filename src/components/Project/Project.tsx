@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ProjectProps } from "../../types/ProjectProps";
+import "./Project.scss";
 
 const Project = ({ project }: ProjectProps) => {
   return (
@@ -11,7 +12,7 @@ const Project = ({ project }: ProjectProps) => {
       {project.thumbnail.length > 0 && (
         <div className="project__images">
           {project.thumbnail.map((image) => (
-            <img className="project__thumbnail" src={image} key={image} />
+            <img className="project__thumbnail" src={image} />
           ))}
         </div>
       )}
