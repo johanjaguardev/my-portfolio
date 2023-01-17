@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-type AdminProps = {
-  projectValue?: string;
-};
-
+import { AdminProps } from "../../types/AdminProps";
 const Admin = ({ projectValue }: AdminProps) => {
   const handleSendClick = (e: React.MouseEvent<HTMLElement>): void => {
     e.preventDefault();
