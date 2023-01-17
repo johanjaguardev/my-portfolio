@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import logo from "./assets/logo-2x.png";
 import { Admin } from "./components/Admin/Admin";
 import "bulma/css/bulma.min.css";
@@ -106,11 +106,14 @@ function App() {
         {isAdminAvailable && <Admin projectValue={""} />}
 
         {projects.length > 0 && (
-          <div className="projects">
-            {projects.map((project) => (
-              <Project project={project} />
-            ))}
-          </div>
+          <React.Fragment>
+            <h2 className="projects__h2">Projects</h2>
+            <div className="projects">
+              {projects.map((project) => (
+                <Project project={project} />
+              ))}
+            </div>
+          </React.Fragment>
         )}
       </div>
     </div>
