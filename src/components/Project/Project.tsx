@@ -12,7 +12,7 @@ const Project = ({ project }: ProjectProps) => {
       {project.thumbnail.length > 0 && (
         <div className="project__images">
           {project.thumbnail.map((image) => (
-            <img className="project__thumbnail" src={image} />
+            <img className="project__thumbnail" src={`${image}`} />
           ))}
         </div>
       )}
@@ -27,10 +27,22 @@ const Project = ({ project }: ProjectProps) => {
       )}
       {"caseOfUse" in project && (
         <div className="project__case-of-use">
-          <p className="project__charge">{project.caseOfUse?.charge}</p>
-          <p className="project__challenge">{project.caseOfUse?.challenge}</p>
-          <p className="project__solution">{project.caseOfUse?.solution}</p>
-          <p className="project__result">{project.caseOfUse?.result}</p>
+          <p className="project__charge">
+            <b>Charge: </b>
+            {project.caseOfUse?.charge}
+          </p>
+          <p className="project__challenge">
+            <b>Challenge: </b>
+            {project.caseOfUse?.challenge}
+          </p>
+          <p className="project__solution">
+            <b>Solution: </b>
+            {project.caseOfUse?.solution}
+          </p>
+          <p className="project__result">
+            <b>Result: </b>
+            {project.caseOfUse?.result}
+          </p>
         </div>
       )}
       {/* {project.videoUrl && (

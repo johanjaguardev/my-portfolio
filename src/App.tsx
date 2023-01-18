@@ -8,14 +8,15 @@ import "./App.scss";
 
 const mockProjects: IProject[] = [
   {
-    client: "Google",
-    url: "https://www.google.com",
-    stack: ["React", "Node.js", "Typescript"],
-    thumbnail: ["thumbnail1.jpg", "thumbnail2.jpg", "thumbnail3.jpg"],
-    videoUrl: "https://www.youtube.com/watch?v=a1b2c3",
+    client: "Xenía, Classical Studies Portal",
+    url: "http://xenia.bogota.unal.edu.co/",
+    stack: ["Angular", "Wordpress", "Wordpress REST API", "SASS"],
+    thumbnail: ["xenia1.png", "xenia2.png"],
     caseOfUse: {
-      charge: "Create a new search engine",
-      challenge: "The search engine should be fast and efficient",
+      charge:
+        "Create a library for a series of specialized documents on classical studies for the National Online University, organized and available to each of the students through its website, in a manageable and responsive way.",
+      challenge:
+        "Organize the existing .pdf files and easily index them in a user-friendly development for making them editable and with the possibility of adding new books, and to view this catalog of books in a progressive web application in a simple and orderly way.",
       solution: "Create a new algorithm for the search engine",
       result: "Google Search was created",
     },

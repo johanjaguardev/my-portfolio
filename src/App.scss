@@ -14,8 +14,7 @@ div,
 p,
 span,
 em,
-i,
-b {
+i {
   color: $h-color;
   font-family: $font-general;
   font-weight: normal;
@@ -27,7 +26,8 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+b {
   color: $p-color;
   font-family: $font-heading;
   font-weight: bold;
