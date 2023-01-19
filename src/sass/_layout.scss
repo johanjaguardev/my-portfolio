@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, [col-start] 1fr);
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+
+  @media screen and (min-width: $screenS) {
+    max-width: $screenS;
+  }
+
+  @media screen and (min-width: $screenM) {
+    max-width: $screenM;
+  }
+  @media screen and (min-width: $screenL) {
+    max-width: $screenL;
+  }
+  @media screen and (min-width: $screenXL) {
+    max-width: $screenXL;
+  }
+}
