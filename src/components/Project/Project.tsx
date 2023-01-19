@@ -3,17 +3,24 @@ import { ProjectProps } from "../../types/ProjectProps";
 import "./Project.scss";
 
 const Project = ({ project }: ProjectProps) => {
-  return (
-    <div className={`project project__${project.client}`}>
-      <h2>
-        <a href={project.url}>{project.client}</a>
-      </h2>
+  const [expanded, setExpanded] = useState(false);
 
+  return (
+    <div
+      className={`project project__${project.client} ${expanded && "expanded"}`}
+    >
+      <h2>{project.client}</h2>
+      <a className="project__moreinfo" onClick={() => setExpanded(!expanded)}>
+        {!expanded ? "View more info =>" : "Hide Details <="}
+      </a>
       {project.thumbnail.length > 0 && (
         <div className="project__images">
-          {project.thumbnail.map((image) => (
-            <img className="project__thumbnail" src={`${image}`} />
-          ))}
+          {project.thumbnail.map(
+            (image, index) =>
+              (index === 0 || expanded) && (
+                <img className="project__thumbnail" src={`${image}`} />
+              )
+          )}
         </div>
       )}
       {project.stack.length > 0 && (
@@ -25,7 +32,7 @@ const Project = ({ project }: ProjectProps) => {
           ))}
         </div>
       )}
-      {"caseOfUse" in project && (
+      {"caseOfUse" in project && expanded && (
         <div className="project__case-of-use">
           <p className="project__charge">
             <b>Charge: </b>

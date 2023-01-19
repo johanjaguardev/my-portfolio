@@ -1,23 +1,48 @@
 @import "./../../sass/variables";
 .project {
-  grid-column: span 3;
-
-  h2 {
-    a {
-      color: $h-color;
-    }
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 4;
+  justify-content: space-evenly;
+  transition: 0.3s ease-in-out grid-column;
+  &.expanded {
+    grid-column: span 12;
   }
 
+  h2 {
+    margin-bottom: rem(6px);
+    line-height: 1;
+    text-align: center;
+    a {
+      color: $h-color;
+      text-align: center;
+    }
+  }
+  &__moreinfo {
+    margin-bottom: rem(30px);
+    color: $a-color;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+  }
   &__stack {
     display: grid;
     grid-template-columns: repeat(5, [col-start] 1fr);
     gap: 5px;
+    margin: rem(10px) 0;
   }
 
   &__skill {
-    background-color: $a-color;
+    align-items: center;
+    background-color: $tag-color;
     border-radius: rem(7px);
-    padding: rem(2px) rem(5px);
     color: $bg-body;
+    display: flex;
+    font-size: rem(11px);
+    justify-content: center;
+    padding: rem(1px) rem(3px);
+    text-align: center;
   }
 }

@@ -27,7 +27,8 @@ $font-heading: "Roboto Condensed", sans-serif;
 $font-general: "Roboto", sans-serif;
 //colors basis
 /* SCSS HEX */
-$light-gray: #d6d6d6ff;
+$frostbite: #e93bb5ff;
+$pale-spring-bud: #dedbb5ff;
 $aureolin: #ffee32ff;
 $cyber-yellow: #ffd100ff;
 $eerie-black: #202020ff;
@@ -38,4 +39,6 @@ $bg-body: $cyber-yellow;
 $border-color: $eerie-black;
 $h-color: $eerie-black;
 $p-color: $eerie-black;
-$a-color: $jet;
+$a-color: $frostbite;
+
+$tag-color: $jet;

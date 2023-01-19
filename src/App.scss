@@ -60,7 +60,7 @@ h2 {
   display: grid;
   gap: 20px;
   grid-column: span 10;
-  grid-template-columns: repeat(10, [col-start] 1fr);
+  grid-template-columns: repeat(12, [col-start] 1fr);
   border: 10px solid $border-color;
   border-radius: $border-radius;
   margin: 0 0 rem(20px);
