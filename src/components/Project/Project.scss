@@ -3,9 +3,32 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  grid-column: span 4;
+  grid-column: span 3;
   justify-content: space-evenly;
   transition: 0.3s ease-in-out grid-column;
+
+  //   // Bulma Breakpoints
+  // $screenXL: 1408px;
+  // $screenL: 1216px;
+  // $screenM: 1024px;
+
+  // // tablet and landscape mobile
+  // $screenS: 769px;
+
+  // //mobile
+  // $screenXS: 414px;
+
+  @media screen and (max-width: $screenXL) {
+    grid-column: span 4;
+  }
+
+  @media screen and (max-width: $screenM) {
+    grid-column: span 6;
+  }
+
+  @media screen and (max-width: $screenXS) {
+    grid-column: span 12;
+  }
   &.expanded {
     grid-column: span 12;
     grid-row-start: 1;
