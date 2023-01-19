@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-
-type AdminDashboardProps = {
-  projectValue: string;
-};
-
-const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
+import React, { useState, useEffect } from "react";
+import { AdminProps } from "../../types/AdminProps";
+const Admin = ({ projectValue }: AdminProps) => {
   const handleSendClick = (e: React.MouseEvent<HTMLElement>): void => {
     e.preventDefault();
     setScreenValue(value);
@@ -12,6 +8,10 @@ const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
 
   const [value, setValue] = useState("");
   const [screenValue, setScreenValue] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("screenValue", JSON.stringify(screenValue));
+  }, [screenValue]);
   return (
     <React.Fragment>
       <form action="" className="main">
@@ -40,4 +40,4 @@ const AdminDashboard = ({ projectValue }: AdminDashboardProps) => {
     </React.Fragment>
   );
 };
-export { AdminDashboard };
+export { Admin };
