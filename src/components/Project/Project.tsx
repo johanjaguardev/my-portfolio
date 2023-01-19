@@ -25,6 +25,7 @@ const Project = ({ project }: ProjectProps) => {
       )}
       {project.stack.length > 0 && (
         <div className="project__stack">
+          <b>Tech Stack: </b>
           {project.stack.map((skill) => (
             <p className="project__skill" key={skill}>
               {skill}

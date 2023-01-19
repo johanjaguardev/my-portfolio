@@ -8,6 +8,7 @@
   transition: 0.3s ease-in-out grid-column;
   &.expanded {
     grid-column: span 12;
+    grid-row-start: 1;
   }
 
   h2 {
@@ -30,7 +31,7 @@
     display: grid;
     grid-template-columns: repeat(5, [col-start] 1fr);
     gap: 5px;
-    margin: rem(10px) 0;
+    margin: rem(16px) 0 rem(32px) 0;
   }
 
   &__skill {
@@ -39,9 +40,11 @@
     border-radius: rem(7px);
     color: $bg-body;
     display: flex;
-    font-size: rem(11px);
+    font-family: $font-heading;
+    font-size: rem(12px);
+    font-weight: bold;
     justify-content: center;
-    padding: rem(1px) rem(3px);
+    padding: rem(5px) rem(10px);
     text-align: center;
   }
 }

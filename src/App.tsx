@@ -32,67 +32,95 @@ const mockProjects: IProject[] = [
     //   "Google Search is one of the most used search engines in the world",
   },
   {
-    client: "Facebook",
-    url: "https://www.facebook.com",
-    stack: ["React", "Node.js", "Typescript"],
-    thumbnail: ["thumbnail1.jpg", "thumbnail2.jpg", "thumbnail3.jpg"],
-    videoUrl: "https://www.youtube.com/watch?v=d4e5f6",
-    caseOfUse: {
-      charge: "Create a new social network",
-      challenge: "The social network should be user friendly",
-      solution: "Create a simple and intuitive interface",
-      result: "Facebook was created",
-    },
-    achievement: [
-      {
-        number: 1,
-        description: "Most used social network in the world",
-      },
-    ],
-    observations:
-      "Facebook is one of the most used social networks in the world",
+    client: "RentingCarz",
+    url: "https://rentingcarz.com/",
+    stack: ["Yii Framework", "Stylus", "Javascript"],
+    thumbnail: ["rentingcarz1.png", "rentingcarz2.png"],
+    // videoUrl: "https://www.youtube.com/watch?v=d4e5f6",
+    // caseOfUse: {
+    //   charge: "Create a new social network",
+    //   challenge: "The social network should be user friendly",
+    //   solution: "Create a simple and intuitive interface",
+    //   result: "Facebook was created",
+    // },
+    // achievement: [
+    //   {
+    //     number: 1,
+    //     description: "Most used social network in the world",
+    //   },
+    // ],
+    // observations:
+    //   "Facebook is one of the most used social networks in the world",
   },
   {
-    client: "Spotify",
-    url: "https://www.spotify.com",
-    stack: ["React", "Node.js", "Typescript"],
-    thumbnail: ["thumbnail1.jpg", "thumbnail2.jpg", "thumbnail3.jpg"],
-    videoUrl: "https://www.youtube.com/watch?v=g7h8i9",
-    caseOfUse: {
-      charge: "Create a new music streaming platform",
-      challenge: "The music streaming platform should be easy to use",
-      solution: "Create a simple and intuitive interface",
-      result: "Spotify was created",
-    },
-    achievement: [
-      {
-        number: 1,
-        description: "Most used music streaming platform in the world",
-      },
+    client: "El Tiempo - 2018 World Cup Specials",
+    url: "https://www.eltiempo.com/deportes/futbol-internacional/simulador-de-los-grupos-del-mundial-de-rusia-2018-151692",
+    stack: [
+      "Javascript",
+      "Gulp",
+      "Handlebars",
+      "SASS",
+      "Adaptative Desing",
+      "CSS Animations",
     ],
-    observations:
-      "Spotify is one of the most used music streaming platforms in the world",
+    thumbnail: ["rusia1.png"],
+    // videoUrl: "https://www.youtube.com/watch?v=j0k1l2",
+    // caseOfUse: {
+    //   charge: "Create a new accommodation platform",
+    //   challenge: "The accommodation platform should be easy to use",
+    //   solution: "Create a simple and intuitive interface",
+    //   result: "Airbnb was created",
+    // },
+    // achievement: [
+    //   {
+    //     number: 1,
+    //     description: "Most used accommodation platform in the world",
+    //   },
+    // ],
+    // observations:
+    //   "Airbnb is one of the most used accommodation platforms in the world",
   },
   {
-    client: "Airbnb",
-    url: "https://www.airbnb.com",
-    stack: ["React", "Node.js", "Typescript"],
-    thumbnail: ["thumbnail1.jpg", "thumbnail2.jpg", "thumbnail3.jpg"],
-    videoUrl: "https://www.youtube.com/watch?v=j0k1l2",
-    caseOfUse: {
-      charge: "Create a new accommodation platform",
-      challenge: "The accommodation platform should be easy to use",
-      solution: "Create a simple and intuitive interface",
-      result: "Airbnb was created",
-    },
-    achievement: [
-      {
-        number: 1,
-        description: "Most used accommodation platform in the world",
-      },
-    ],
-    observations:
-      "Airbnb is one of the most used accommodation platforms in the world",
+    client: "AgentCars",
+    url: "https://www.agentcars.com/",
+    stack: ["Yii Framework", "Stylus", "Javascript"],
+    thumbnail: ["agentcars1.png", "agentcars2.png"],
+    // videoUrl: "https://www.youtube.com/watch?v=g7h8i9",
+    // caseOfUse: {
+    //   charge: "Create a new music streaming platform",
+    //   challenge: "The music streaming platform should be easy to use",
+    //   solution: "Create a simple and intuitive interface",
+    //   result: "Spotify was created",
+    // },
+    // achievement: [
+    //   {
+    //     number: 1,
+    //     description: "Most used music streaming platform in the world",
+    //   },
+    // ],
+    // observations:
+    //   "Spotify is one of the most used music streaming platforms in the world",
+  },
+  {
+    client: "Halal America",
+    url: "https://halalamericalatina.com/",
+    stack: ["Wordpress", "SASS", "Responsive Desing", "Guttenberg"],
+    thumbnail: ["halal1.png"],
+    // videoUrl: "https://www.youtube.com/watch?v=g7h8i9",
+    // caseOfUse: {
+    //   charge: "Create a new music streaming platform",
+    //   challenge: "The music streaming platform should be easy to use",
+    //   solution: "Create a simple and intuitive interface",
+    //   result: "Spotify was created",
+    // },
+    // achievement: [
+    //   {
+    //     number: 1,
+    //     description: "Most used music streaming platform in the world",
+    //   },
+    // ],
+    // observations:
+    //   "Spotify is one of the most used music streaming platforms in the world",
   },
 ];
 function App() {
