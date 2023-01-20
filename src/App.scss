@@ -44,9 +44,18 @@ h2 {
   width: 100%;
 }
 
+.only-desktop {
+  @media screen and (max-width: $screenXS) {
+    display: none;
+  }
+}
+
 .App {
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
@@ -57,17 +66,45 @@ h2 {
 }
 
 .projects {
-  display: grid;
-  gap: 20px;
-  grid-column: span 10;
-  grid-template-columns: repeat(12, [col-start] 1fr);
   border: 10px solid $border-color;
   border-radius: $border-radius;
+  display: grid;
+  gap: 20px;
+  grid-column: span 12;
+  grid-template-columns: repeat(12, [col-start] 1fr);
   margin: 0 0 rem(20px);
   padding: 20px;
 
+  @media screen and (max-width: $screenXS) {
+    margin: rem(20px);
+    padding: 20px;
+  }
+
   &__h2 {
-    grid-column: span 10;
+    grid-column: span 12;
     text-align: center;
+  }
+}
+.description {
+  font-family: $font-general;
+  font-size: rem(24px);
+  grid-column: span 12;
+  padding: rem(64px);
+
+  @media screen and (max-width: $screenXS) {
+    font-size: rem(18px);
+    padding: rem(24px);
+    text-align: center;
+  }
+}
+
+.footer {
+  background-color: $bg-footer;
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+  padding: rem(64px);
+  p {
+    color: $footer-color;
   }
 }

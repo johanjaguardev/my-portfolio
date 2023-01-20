@@ -130,9 +130,31 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
+      <header className="header container">
         {!logo && <h1>Portfolio - Johan Vargas</h1>}
         <img src={logo} className="logo" />
+      </header>
+      <div className="container">
+        <div className="description">
+          <p>
+            I'm a Frontend developer with 8 years of experience in the area. I
+            have 3 years of experience with React and Angular and 1 year with
+            VueJs.
+          </p>
+          <p className="only-desktop">
+            I have a strong understanding of the latest technologies and
+            industry best practices.{" "}
+          </p>
+          <p className="only-desktop">
+            I am open to learning new technologies to keep up with the
+            constantly evolving field of web.
+          </p>
+          <p className="only-desktop">
+            I am motivated and contribute to a positive work environment. If you
+            are interested in my profile, please contact me by email at
+            johanvargasdev@gmail.com, or by phone at (57)3044704118.
+          </p>
+        </div>
 
         {isAdminAvailable && <Admin projectValue={""} />}
 
@@ -147,6 +169,16 @@ function App() {
           </React.Fragment>
         )}
       </div>
+      <footer className="footer container">
+        <p>
+          Bogota, Colombia (UTC-5) <br />
+          (+57) 3044704118 <br />
+          johanvargasdev@gmail.com
+          <br />
+          https://www.linkedin.com/in/johanvargas <br />
+          https://johan.wtf/
+        </p>
+      </footer>
     </div>
   );
 }
