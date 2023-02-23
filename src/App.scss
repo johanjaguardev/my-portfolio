@@ -3,42 +3,13 @@
 @import "./sass/variables";
 @import "./sass/layout";
 body {
-  background-color: $bg-body;
+  // background-color: $bg-body;
   display: flex;
   font-family: $font-general;
   font-size: $html-font-size;
   justify-content: center;
   width: 100%;
-}
-div,
-p,
-span,
-em,
-i {
-  color: $h-color;
-  font-family: $font-general;
-  font-weight: normal;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-b {
-  color: $p-color;
-  font-family: $font-heading;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: rem(72px);
-}
-
-h2 {
-  font-size: rem(48px);
+  transition: 0.3s ease-out all;
 }
 #root {
   width: 100%;
@@ -51,12 +22,70 @@ h2 {
 }
 
 .App {
+  background-color: $bg-body;
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  transition: 0.3s ease-out all;
   width: 100%;
+
+  div,
+  p,
+  span,
+  em,
+  i {
+    color: $h-color;
+    font-family: $font-general;
+    font-weight: normal;
+    transition: 0.3s ease-out all;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  b {
+    color: $p-color;
+    font-family: $font-heading;
+    font-weight: bold;
+    transition: 0.3s ease-out all;
+  }
+
+  h1 {
+    font-size: rem(72px);
+  }
+
+  h2 {
+    font-size: rem(48px);
+  }
+
+  &.theme-master {
+    background-color: $master-bg-body;
+
+    div,
+    p,
+    span,
+    em,
+    i {
+      color: $master-p-color;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    b {
+      color: $master-h-color;
+    }
+  }
 }
 
 .logo {
@@ -74,6 +103,7 @@ h2 {
   grid-template-columns: repeat(12, [col-start] 1fr);
   margin: 0 0 rem(20px);
   padding: 20px;
+  transition: 0.3s ease-out all;
 
   @media screen and (max-width: $screenXS) {
     margin: rem(20px);
@@ -83,6 +113,10 @@ h2 {
   &__h2 {
     grid-column: span 12;
     text-align: center;
+  }
+
+  &.theme-master {
+    border-color: $master-border-color;
   }
 }
 .description {
@@ -104,7 +138,17 @@ h2 {
   margin: 0;
   max-width: 100%;
   padding: rem(64px);
+  transition: 0.3s ease-out all;
+
   p {
     color: $footer-color;
+    transition: 0.3s ease-out all;
+  }
+
+  &.theme-master {
+    background-color: $master-tag-bg;
+    p {
+      color: $master-tag-color;
+    }
   }
 }
