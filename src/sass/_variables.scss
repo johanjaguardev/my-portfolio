@@ -34,6 +34,12 @@ $cyber-yellow: #ffd100ff;
 $eerie-black: #202020ff;
 $jet: #333533ff;
 
+$stardust: #999999;
+$white: #ffffff;
+$radical-red: #fe005e;
+$windsor: #48006f;
+$purple-heart: #7700b8;
+
 //semantic colors
 $bg-body: $cyber-yellow;
 $border-color: $eerie-black;
@@ -42,5 +48,16 @@ $p-color: $eerie-black;
 $a-color: $frostbite;
 $bg-footer: $jet;
 $footer-color: $cyber-yellow;
+$tag-color: $white;
+$tag-bg: $jet;
 
-$tag-color: $jet;
+//semantic colors - master theme
+$master-bg-body: $stardust;
+$master-border-color: $windsor;
+$master-h-color: $radical-red;
+$master-p-color: $eerie-black;
+$master-a-color: $radical-red;
+$master-bg-footer: $purple-heart;
+$master-footer-color: $purple-heart;
+$master-tag-color: $white;
+$master-tag-bg: $windsor;

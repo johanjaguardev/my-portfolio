@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { ProjectProps } from "../../types/ProjectProps";
+import { ThemeContext } from "../../contexts/ThemeContext";
+
 import "./Project.scss";
 
 const Project = ({ project }: ProjectProps) => {
   const [expanded, setExpanded] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div
-      className={`project project__${project.client} ${expanded && "expanded"}`}
+      className={`project project__${project.client} ${
+        expanded && "expanded"
+      } theme-${theme}`}
     >
       <h2>{project.client}</h2>
       <a className="project__moreinfo" onClick={() => setExpanded(!expanded)}>
